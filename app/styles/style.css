@@ -2,14 +2,14 @@
 	-moz-box-shadow:inset 16px -13px 15px -12px #59514e;
 	-webkit-box-shadow:inset 16px -13px 15px -12px #59514e;
 	box-shadow:inset 16px -13px 15px -12px #59514e;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #aff21d), color-stop(1, #26331c));
-	background:-moz-linear-gradient(top, #aff21d 5%, #26331c 100%);
-	background:-webkit-linear-gradient(top, #aff21d 5%, #26331c 100%);
-	background:-o-linear-gradient(top, #aff21d 5%, #26331c 100%);
-	background:-ms-linear-gradient(top, #aff21d 5%, #26331c 100%);
-	background:linear-gradient(to bottom, #aff21d 5%, #26331c 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#aff21d', endColorstr='#26331c',GradientType=0);
-	background-color:#aff21d;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f7e4b7), color-stop(1, #26331c));
+	background:-moz-linear-gradient(top, #f7e4b7 5%, #26331c 100%);
+	background:-webkit-linear-gradient(top, #f7e4b7 5%, #26331c 100%);
+	background:-o-linear-gradient(top, #f7e4b7 5%, #26331c 100%);
+	background:-ms-linear-gradient(top, #f7e4b7 5%, #26331c 100%);
+	background:linear-gradient(to bottom, #f7e4b7 5%, #26331c 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7e4b7', endColorstr='#26331c',GradientType=0);
+	background-color:#f7e4b7;
 	-moz-border-radius:42px;
 	-webkit-border-radius:42px;
 	border-radius:42px;
@@ -24,16 +24,70 @@
 	text-shadow:1px 1px 3px #53b0b5;
 }
 .roomButton:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #26331c), color-stop(1, #aff21d));
-	background:-moz-linear-gradient(top, #26331c 5%, #aff21d 100%);
-	background:-webkit-linear-gradient(top, #26331c 5%, #aff21d 100%);
-	background:-o-linear-gradient(top, #26331c 5%, #aff21d 100%);
-	background:-ms-linear-gradient(top, #26331c 5%, #aff21d 100%);
-	background:linear-gradient(to bottom, #26331c 5%, #aff21d 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#26331c', endColorstr='#aff21d',GradientType=0);
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #26331c), color-stop(1, #f7e4b7));
+	background:-moz-linear-gradient(top, #26331c 5%, #f7e4b7 100%);
+	background:-webkit-linear-gradient(top, #26331c 5%, #f7e4b7 100%);
+	background:-o-linear-gradient(top, #26331c 5%, #f7e4b7 100%);
+	background:-ms-linear-gradient(top, #26331c 5%, #f7e4b7 100%);
+	background:linear-gradient(to bottom, #26331c 5%, #f7e4b7 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#26331c', endColorstr='#f7e4b7',GradientType=0);
 	background-color:#26331c;
 }
 .roomButton:active {
 	position:relative;
 	top:1px;
+}
+
+.background
+{
+  background-color: #f7e4b7;
+}
+
+#main {
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	max-width: 100em;
+	margin: 2em auto 0 auto;
+	background-color: white;
+	-webkit-box-shadow: .5em 0 1em .5em rgba(0,0,0,0.34);
+  -moz-box-shadow: .5em 0 1em .5em rgba(0,0,0,0.34);
+  box-shadow: .5em 0 1em .5em rgba(0,0,0,0.34);
+}
+
+#model {
+	width: 43em;
+	height: 10em;
+	background-color: white;
+}
+
+.model-button
+{
+  position: absolute;
+  bottom: 0;
+  right: 1em;
+}
+
+.model-textarea
+{
+  float: right;
+  margin-right: 1em;
+}
+
+.sidebar 
+{
+  padding-left: 1em;
+  width: 10em;
+  background-color: darkred;
+  color: red;
+  font-size: 1.3em;
+  text-shadow: black .1em .1em 0, black -.1em -.1em .5em;
+}
+
+.room
+{
+  padding-left: 1em;
+  width: 40em;
+  flex-grow: 1;
 }
