@@ -1,7 +1,16 @@
-<div id="model">
-  <h1>Start new Thead</h1>
-  <form>
-    <div class="model-textarea">Plese enter chat room name: - <input type="textarea" ng-model="model.roomTitle" name="chatRoomCreator"/></div>
-    <div class="model-button">Create Room <a class="roomButton" ng-click="model.makeRoom()">New Room</a></div>
-  </form>
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" ng-click="model.closeRoom()">&times;</button>
+    <h4 class="modal-title">Start new Thead</h4>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="text-right">Plese enter chat room name: <input class="form-control" type="textarea" ng-model="model.roomTitle" name="chatRoomCreator"/></div>
+      <br />
+      <div class="text-right">Create Room <a class="roomButton" ng-click="model.makeRoom()">New Room</a></div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" ng-click="model.closeRoom()">Close</button>
+  </div>
 </div>

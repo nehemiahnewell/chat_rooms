@@ -9,6 +9,10 @@
       Room.newRoom(this.roomTitle);
       $uibModalInstance.close();
     };
+    this.closeRoom = function ()
+    {
+      $uibModalInstance.close();
+    };
     
   }
   angular

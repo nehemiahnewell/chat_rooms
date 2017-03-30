@@ -56,25 +56,6 @@
   box-shadow: .5em 0 1em .5em rgba(0,0,0,0.34);
 }
 
-#model {
-	width: 43em;
-	height: 10em;
-	background-color: white;
-}
-
-.model-button
-{
-  position: absolute;
-  bottom: 0;
-  right: 1em;
-}
-
-.model-textarea
-{
-  float: right;
-  margin-right: 1em;
-}
-
 .sidebar 
 {
   padding-left: 1em;
