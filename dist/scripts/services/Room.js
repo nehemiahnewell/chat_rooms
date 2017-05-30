@@ -2,12 +2,12 @@
 /*global firebase*/
 (function() {
   function Room($firebaseArray) {
-    var ref = firebase.database().ref().child("rooms");
+    Room.ref = firebase.database().ref().child("rooms");
     
     // @variable rooms
     // @desc holds the array of chatrooms
     // @param {array} room
-    Room.rooms = $firebaseArray(ref);
+    Room.rooms = $firebaseArray(Room.ref);
     
     // @function newRoom
     // @desc creates a new room

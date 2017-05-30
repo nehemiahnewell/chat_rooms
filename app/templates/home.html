@@ -2,12 +2,19 @@
   <aside class='sidebar'>
     <h1>Chat Rooms</h1>
     <a class="roomButton" ng-click="home.makeRoom()">New Room</a>
-    <div ng-repeat="room in home.rooms track by $index">
-      {{ $index + 1 }} {{ room.title }}
+    <div ng-repeat="room in rooms track by $index">
+      {{ $index + 1 }} <a ng-click="home.updateCurrentRoom(room.$id)">{{ room.title }}</a>
     </div>
   </aside>
   <div class='room'>
-    <h1>This will be the current room</h1>
-    <section class='post'>Look at his great content</section>
+    <div ng-show="home.currentRoom == 'landing'">
+      <h1>Welecome to Chat!</h1>
+      <section class='post'>Welcome to chat! To get started, click on one of the rooms on the left and side, and jump in!</section>
+    </div>
+    <div ng-show="home.currentRoom != 'landing'">
+      <h1>{{ home.currentRoomName }}</h1>
+      <div ng-repeat="message in home.messages | filter:{roomId:home.currentRoom}">
+      <section class='post'>{{ $index}} {{ message }}</section>
+    </div>
   </div>
 </div>
