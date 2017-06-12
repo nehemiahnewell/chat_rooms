@@ -5,7 +5,7 @@
   </div>
   <div class="modal-body">
     <form>
-      <div class="text-right">Plese enter chat room name: <input class="form-control" type="textarea" ng-model="model.roomTitle" name="chatRoomCreator"/></div>
+      <div class="text-right">Plese enter chat room name: <input class="form-control" type="textarea" ng-model="model.roomTitle" name="chatRoomCreator" minlength=3 required/></div>
       <br />
       <div class="text-right">Create Room <a class="roomButton" ng-click="model.makeRoom()">New Room</a></div>
     </form>

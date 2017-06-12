@@ -14,7 +14,7 @@
     });
   }
   angular
-    .module('chatRooms', ['ui.router','firebase','ui.bootstrap'])
-    // .module('chatRooms', ['ui.router','firebase'])
+    .module('chatRooms', ['ui.router','firebase','ui.bootstrap','ngCookies'])
+    // .module('chatRooms', ['ui.router','firebase','ngCookies'])
     .config(config);
 })();
