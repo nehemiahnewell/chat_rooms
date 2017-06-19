@@ -14,7 +14,15 @@
     <div ng-show="home.currentRoom != 'landing'">
       <h1>{{ home.currentRoomName }}</h1>
       <div ng-repeat="message in home.messages | filter:{roomId:home.currentRoom}">
-      <section class='post'>{{ $index}} {{ message }}</section>
+        <section class='post'>{{ $index}} {{ message }}</section>
+      </div>
     </div>
+    <form>
+      <div class="text-right">Reply
+      <br />
+      <input class="form-control" type="textarea" ng-model="home.postText" name="postingText" minlength=10 required/></div>
+      <br />
+      <a class="roomButton" ng-click="home.postIt()">Post</a></div>
+    </form>
   </div>
 </div>

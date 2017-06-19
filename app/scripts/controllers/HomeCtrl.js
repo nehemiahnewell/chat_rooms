@@ -1,11 +1,12 @@
 /*global angular*/
 (function() {
-  function HomeCtrl(Room, Message, $uibModal, $scope) {
+  function HomeCtrl(Room, Message, $uibModal, $scope, $cookies) {
   // function HomeCtrl(Room) {
     $scope.rooms = Room.rooms;
     this.currentRoom = "landing";
     this.currentRoomName = "Landing";
     this.messages;
+    this.postText = "";
     this.makeRoom = function()
     {
       $uibModal.open({
@@ -23,8 +24,12 @@
       console.log(this.messages);
       // insert room updating logic here.
     };
+    this.postIt = function()
+    {
+      Message.send(this.postText,this.currentRoom, $cookies.get('blocChatCurrentUser'));
+    };
   }
   angular
     .module('chatRooms')
-    .controller('HomeCtrl', ['Room', 'Message', '$uibModal', '$scope', HomeCtrl]);
+    .controller('HomeCtrl', ['Room', 'Message', '$uibModal', '$scope', '$cookies', HomeCtrl]);
 })();
